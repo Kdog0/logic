@@ -1,0 +1,25 @@
+const input =  require("prompt-sync")({sigint:true})
+
+var n = []
+var p = 0
+var menor = 100
+
+
+function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function pop(){
+    for(i=0;i<20;i++){
+    
+        n.push(getRandom(0,100))
+        if(n[i]< menor){
+            menor = n[i]
+            p = i + 1
+        }
+        
+    }
+    console.log(menor)
+    console.log(p)
+}
+pop()

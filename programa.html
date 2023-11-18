@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <title>Document</title>
+
+    <style>
+       
+        *{
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            margin:0;
+            padding: 0;
+        }
+        canvas{
+            width: 100vw;
+            height: auto;
+            
+        }
+
+       
+      
+     
+    </style>
+    
+
+
+    
+ 
+</head>
+<body>
+    
+    <canvas id="canvas"></canvas>
+   
+
+    <script>
+        const painel = document.querySelector("canvas"),
+        ctx = painel.getContext("2d")
+        var line = 15
+        var widthx = 250
+        var heighty = 30
+        var sqwidth = 800
+        var sqheigth = 100
+        var rqx=260
+        var rqy=
+        var xball = 30
+        var yball = 40
+        var rball = 10
+        var blangs = 0
+        var blange = Math.PI*2
+
+
+
+        function setup(){
+            painel.width = window.innerWidth
+            painel.heigth = window.innerHeigth
+            ctx.width = window.innerWidth
+            ctx.heigth = window.innerHeight
+        }
+
+        function draw(){
+            ctx.fillStyle = "#000000"
+            ctx.fillRect(widthx,heighty,sqwidth,sqheigth)
+
+            
+            ctx.fillStyle = "#ffffff"
+            ctx.fillRect(window.innerWidth / 2 - line / 2, 30, line, sqheigth)
+
+            
+            ctx.fillStyle = "#000000"
+            ctx.arc(xball, yball, rball, 0, blange)
+            ctx.fill()
+
+
+
+            
+            
+           
+        }
+
+        setup()
+        draw()
+       
+        
+    </script>
+
+</body>
+</html>
